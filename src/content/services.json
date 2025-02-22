@@ -1,0 +1,37 @@
+{
+  "services": [
+    {
+      "title": "Birthday Parties",
+      "description": "Make your child's special day unforgettable with our professional face painting services.",
+      "icon": "🎈",
+      "features": [
+        "Perfect for ages 3-12",
+        "Themed designs available",
+        "Hypoallergenic paints",
+        "Photo opportunities"
+      ]
+    },
+    {
+      "title": "Corporate Events",
+      "description": "Add a unique touch to your company events with our professional face painting services.",
+      "icon": "🎭",
+      "features": [
+        "Brand-themed designs",
+        "Multiple artists available",
+        "Perfect for family days",
+        "Indoor/outdoor setup"
+      ]
+    },
+    {
+      "title": "Festivals & Fairs",
+      "description": "Bring extra joy and excitement to your public events with our face painting station.",
+      "icon": "🎪",
+      "features": [
+        "High-volume capacity",
+        "Quick designs available",
+        "Weather-proof setup",
+        "Flexible hours"
+      ]
+    }
+  ]
+}

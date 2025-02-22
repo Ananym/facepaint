@@ -1,14 +1,101 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta name="description" content="Professional Face Painting Services in London and Surrey" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<slot />
+	<body class="min-h-screen bg-white text-black font-['Poppins']">
+		<header class="fixed w-full bg-white shadow-md z-50">
+			<nav class="container mx-auto px-4 py-4">
+				<div class="flex justify-between items-center">
+					<a href="/" class="text-xl md:text-2xl font-bold relative group">
+						<span class="relative z-10">FacePaint Magic</span>
+						<span class="absolute bottom-0 left-0 w-full h-2 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+					</a>
+					<div class="hidden md:flex space-x-8">
+						<a href="#services" class="text-base relative group">
+							<span>Services</span>
+							<span class="absolute -bottom-1 left-0 w-full h-0.5 bg-black origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+						</a>
+						<a href="#gallery" class="text-base relative group">
+							<span>Gallery</span>
+							<span class="absolute -bottom-1 left-0 w-full h-0.5 bg-black origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+						</a>
+						<a href="#pricing" class="text-base relative group">
+							<span>Pricing</span>
+							<span class="absolute -bottom-1 left-0 w-full h-0.5 bg-black origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+						</a>
+						<a href="#contact" class="text-base relative group">
+							<span>Contact</span>
+							<span class="absolute -bottom-1 left-0 w-full h-0.5 bg-black origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+						</a>
+					</div>
+					<button class="md:hidden" id="menu-button">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</div>
+				<div class="md:hidden hidden" id="mobile-menu">
+					<div class="flex flex-col space-y-4 pt-4 pb-3">
+						<a href="#services" class="text-base hover:text-gray-600">Services</a>
+						<a href="#gallery" class="text-base hover:text-gray-600">Gallery</a>
+						<a href="#pricing" class="text-base hover:text-gray-600">Pricing</a>
+						<a href="#contact" class="text-base hover:text-gray-600">Contact</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="pt-20">
+			<slot />
+		</main>
+		<footer class="bg-black text-white mt-16 py-8">
+			<div class="container mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="text-lg font-bold mb-4">FacePaint Magic</h3>
+						<p class="text-base">Bringing color and joy to your special events</p>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold mb-4">Contact</h3>
+						<p class="text-base">📱 07700 900000</p>
+						<p class="text-base">📧 info@facepaintmagic.co.uk</p>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold mb-4">Follow Us</h3>
+						<div class="flex space-x-4">
+							<a href="#" class="text-base hover:text-gray-400 transition-colors duration-200">Instagram</a>
+							<a href="#" class="text-base hover:text-gray-400 transition-colors duration-200">Facebook</a>
+							<a href="#" class="text-base hover:text-gray-400 transition-colors duration-200">Twitter</a>
+						</div>
+					</div>
+				</div>
+				<div class="mt-8 text-center">
+					<p class="text-sm">&copy; 2024 FacePaint Magic. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			const menuButton = document.getElementById('menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			menuButton?.addEventListener('click', () => {
+				mobileMenu?.classList.toggle('hidden');
+			});
+		</script>
 	</body>
 </html>
 

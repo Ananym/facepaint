@@ -1,0 +1,52 @@
+{
+  "images": [
+    {
+      "filename": "butterfly.jpg",
+      "title": "Butterfly Princess",
+      "event": "Summer Garden Party",
+      "date": "2025-01-15",
+      "alt": "Child with butterfly face paint design",
+      "placeholder": true
+    },
+    {
+      "filename": "superhero.jpg",
+      "title": "Cosmic Superhero",
+      "event": "Children's Comic Convention",
+      "date": "2024-09-22",
+      "alt": "Child with superhero mask face paint",
+      "placeholder": true
+    },
+    {
+      "filename": "rainbow-tiger.jpg",
+      "title": "Rainbow Tiger",
+      "event": "Wildlife Fun Day",
+      "date": "2024-05-01",
+      "alt": "Child with colorful tiger face paint design",
+      "placeholder": true
+    },
+    {
+      "filename": "fairy.jpg",
+      "title": "Shimmer Fairy",
+      "event": "Enchanted Forest Festival",
+      "date": "2024-04-28",
+      "alt": "Child with sparkly fairy face paint design",
+      "placeholder": true
+    },
+    {
+      "filename": "pirate.jpg",
+      "title": "Sea Captain",
+      "event": "Treasure Island Party",
+      "date": "2024-04-15",
+      "alt": "Child with pirate face paint design",
+      "placeholder": true
+    },
+    {
+      "filename": "unicorn.jpg",
+      "title": "Mystic Unicorn",
+      "event": "Magic & Dreams Festival",
+      "date": "2024-02-08",
+      "alt": "Child with unicorn face paint design",
+      "placeholder": true
+    }
+  ]
+}
